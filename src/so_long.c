@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:46:33 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/06 11:19:17 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/06 17:13:30 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int	main(int ac, char **av)
 		return (0);
 	all = set_and_pars(av[1]);
 	print_matrix(all->dm.map);
+	mlx_pointer(all);
+	display_map(all);
+	all_actions(all);
+	mlx_loop(all->mlx.mlx);
 	free_all(all);
 }
 
@@ -30,6 +34,7 @@ t_alloc	*init_all(void)
 	all = malloc(sizeof(t_alloc));
 	if (!all)
 		exit(EXIT_FAILURE);
+	all->mlx.dro = NULL;
 	return (all);
 }
 

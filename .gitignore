@@ -1,0 +1,9 @@
+# Directorys
+
+obj/
+
+# Files
+
+*.o
+*.a
+so_long

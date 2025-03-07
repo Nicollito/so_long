@@ -48,7 +48,7 @@ real-all : $(LIB) $(OBJ_DIR) $(OBJS) $(NAME)
 $(OBJ_DIR) :
 	@mkdir -p $@
 
-$(OBJS) : $(OBJ_DIR)/%.o : $(SRCS_DIR)/%.c Makefile
+$(OBJS) : $(OBJ_DIR)/%.o : $(SRCS_DIR)/%.c Makefile $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS) $(LIB) $(MLX)

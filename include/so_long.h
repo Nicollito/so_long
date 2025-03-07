@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 10:57:33 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/06 16:57:44 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/07 16:45:27 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 typedef struct data_character
 {
-	char	*path;
 	int		x;
 	int		y;
 }			t_dc;
@@ -30,6 +29,7 @@ typedef struct data_map
 	char	**map;
 	int		h;
 	int		w;
+	int		nbr_coll;
 }			t_map;
 
 typedef struct pointer_mlx
@@ -42,6 +42,7 @@ typedef struct pointer_mlx
 	void	*dro;
 	void	*drc;
 	void	*col;
+	void	*col_empt;
 }			t_mlx;
 
 typedef struct allocaion
@@ -67,14 +68,15 @@ void	fill_map(t_alloc *all, char *name);
 void	nbr_line_map(t_alloc *all, char *name);
 
 // map.c
-void	display_map(t_alloc *all);
+void	display_map(t_alloc *all, int nbr_call);
+void	print_assets(t_alloc *all, int i, int j, int nbr_call);
 
 // parsing.c
 void	shape_map(t_alloc *all);
 void	format_name(char *name);
 void	border_map(t_alloc *all);
 void	map_content(t_alloc *all);
-int	verif_char(t_alloc *all, char c);
+int		verif_char(t_alloc *all, char c);
 
 // set_mlx.c
 void	mlx_pointer(t_alloc *all);
@@ -85,6 +87,8 @@ t_alloc	*set_and_pars(char *name);
 
 // user_actions.c
 int		key_press(int keycode, t_alloc *all);
+int		close_window(t_alloc *all);
 void	all_actions(t_alloc *all);
+void	move_player(t_alloc *all, char coord, char sign);
 
 #endif

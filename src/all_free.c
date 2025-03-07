@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 11:13:11 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/06 17:10:34 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/07 14:42:02 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	free_mlx(t_alloc *all)
 		mlx_destroy_image(all->mlx.mlx, all->mlx.ca);
 	if (all->mlx.col)
 		mlx_destroy_image(all->mlx.mlx, all->mlx.col);
+	if (all->mlx.col_empt)
+		mlx_destroy_image(all->mlx.mlx, all->mlx.col_empt);
 	if (all->mlx.drc)
 		mlx_destroy_image(all->mlx.mlx, all->mlx.drc);
 	if (all->mlx.dro)

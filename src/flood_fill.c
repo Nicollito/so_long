@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   character.c                                        :+:      :+:    :+:   */
+/*   flood_fill.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 14:28:03 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/06 14:34:36 by nimadela         ###   ########.fr       */
+/*   Created: 2025/03/10 17:22:31 by nimadela          #+#    #+#             */
+/*   Updated: 2025/03/10 17:45:30 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	set_chara(t_alloc *all)
+void	flood_fill(char **map, int x, int y)
 {
-	
+	if (map[y][x])
+		
 }

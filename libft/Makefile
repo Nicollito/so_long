@@ -50,13 +50,15 @@ SRCS =	ft_isalpha.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		get_next_line.c \
-		get_next_line_utils.c
+		get_next_line_utils.c \
+		ft_printf.c
 
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
 HEADER = 	libft.h \
-			get_next_line.h
+			get_next_line.h \
+			ft_printf.h
 
 all : $(OBJ_DIR) $(NAME)
 

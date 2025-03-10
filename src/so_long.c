@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:46:33 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/07 17:14:16 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/10 17:16:59 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	main(int ac, char **av)
 	if (ac != 2)
 		return (0);
 	all = set_and_pars(av[1]);
-	print_matrix(all->dm.map);
-	mlx_pointer(all);
 	display_map(all, 0);
 	all_actions(all);
 	mlx_loop(all->mlx.mlx);
@@ -34,6 +32,7 @@ t_alloc	*init_all(void)
 	all = malloc(sizeof(t_alloc));
 	if (!all)
 		exit(EXIT_FAILURE);
+	all->dc.steps = 0;
 	all->dm.map = NULL;
 	all->mlx.mlx = NULL;
 	all->mlx.win = NULL;
@@ -55,8 +54,15 @@ t_alloc	*set_and_pars(char *name)
 	all = init_all();
 	fill_map(all, name);
 	shape_map(all);
+	size_map(all);
 	border_map(all);
 	map_content(all);
+	pars_char(all);
+	return (all);
+}
+
+void	pars_char(t_alloc *all)
+{
 	all->dm.nbr_coll = verif_char(all, 'C');
 	if (!all->dm.nbr_coll)
 	{
@@ -73,5 +79,4 @@ t_alloc	*set_and_pars(char *name)
 		print_error("Error\nThe map must have only one spawn point.\n");
 		exit(free_all(all));
 	}
-	return (all);
 }

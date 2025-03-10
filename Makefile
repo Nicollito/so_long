@@ -13,9 +13,10 @@ SRCS_DIR = src
 SRCS =	$(SRCS_DIR)/all_free.c \
 		$(SRCS_DIR)/error_manage.c \
 		$(SRCS_DIR)/fill_map.c \
+		$(SRCS_DIR)/map_content.c \
 		$(SRCS_DIR)/map.c \
-		$(SRCS_DIR)/parsing.c \
 		$(SRCS_DIR)/set_mlx.c \
+		$(SRCS_DIR)/shape_map.c \
 		$(SRCS_DIR)/so_long.c \
 		$(SRCS_DIR)/user_actions.c \
 		$(SRCS_DIR)/tmp.c

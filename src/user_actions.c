@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 16:34:52 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/10 14:51:32 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:38:02 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	key_press(int keycode, t_alloc *all)
 {
-	if (keycode == 119) // for 'w' key
+	if (keycode == 119)
 		move_player(all, 'y', '-');
-	if (keycode == 115) // for 's' key
+	if (keycode == 115)
 		move_player(all, 'y', '+');
-	if (keycode == 97) // for 'a' key
+	if (keycode == 97)
 		move_player(all, 'x', '-');
-	if (keycode == 100) // for 'd' key
+	if (keycode == 100)
 		move_player(all, 'x', '+');
-	if (keycode == 65307) // for 'esc' key
+	if (keycode == 65307)
 		exit(free_all(all));
 	return (0);
 }
@@ -37,9 +37,9 @@ int	print_chara(t_alloc *all)
 {
 	mlx_put_image_to_window(all->mlx.mlx, all->mlx.win,
 		all->mlx.ca, all->dc.x, all->dc.y);
-		return (0);
+	return (0);
 }
-	
+
 void	all_actions(t_alloc *all)
 {
 	mlx_hook(all->mlx.win, 2, 1L << 0, key_press, all);
@@ -71,7 +71,7 @@ void	move_player(t_alloc *all, char coord, char sign)
 	decrement_coll(all, map_y, map_x);
 	all->dc.x = new_x;
 	all->dc.y = new_y;
-	display_map(all, 1); 
+	display_map(all);
 	if (all->dm.map[map_y][map_x] == 'E' && all->dm.nbr_coll == 0)
 		exit(free_all(all));
 }

@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:07:43 by nimadela          #+#    #+#             */
-/*   Updated: 2025/02/24 09:51:14 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:55:58 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # include <stdlib.h>
 # include "libft.h"
 
-#include "../include/tmp.h"
+#include "../include/tmp2.h"
 
 char	*ft_strcpy_until(char *dest, char *src, char delim);
 char	*get_next_line(int fd);

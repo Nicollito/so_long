@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:46:33 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/10 17:16:59 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:22:13 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(int ac, char **av)
 	if (ac != 2)
 		return (0);
 	all = set_and_pars(av[1]);
-	display_map(all, 0);
+	mlx_pointer(all);
+	display_map(all);
 	all_actions(all);
 	mlx_loop(all->mlx.mlx);
 	free_all(all);
@@ -58,6 +59,8 @@ t_alloc	*set_and_pars(char *name)
 	border_map(all);
 	map_content(all);
 	pars_char(all);
+	set_coord_character(all);
+	set_flood_fill(all);
 	return (all);
 }
 

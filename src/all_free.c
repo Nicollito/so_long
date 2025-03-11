@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 11:13:11 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/07 14:42:02 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:35:52 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	free_map(char **map)
 	}
 	free(map);
 }
+
 void	free_mlx(t_alloc *all)
 {
 	if (all->mlx.ca)

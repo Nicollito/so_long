@@ -13,6 +13,7 @@ SRCS_DIR = src
 SRCS =	$(SRCS_DIR)/all_free.c \
 		$(SRCS_DIR)/error_manage.c \
 		$(SRCS_DIR)/fill_map.c \
+		$(SRCS_DIR)/flood_fill.c \
 		$(SRCS_DIR)/map_content.c \
 		$(SRCS_DIR)/map.c \
 		$(SRCS_DIR)/set_mlx.c \
@@ -38,6 +39,7 @@ check-build :
 		&& [ -z "$$(find libft \( -name "*.c" -o -name "*.h" -o -name "Makefile" \) -newer "$(LIB)")" ] \
 		&& [ -z "$$(find "$(SRCS_DIR)" -name "*.c" -newer "$(NAME)")" ] \
 		&& [ -z "$$(find "$(HEADER_DIR)" -name "*.h" -newer "$(NAME)")" ] \
+		&& [ -z "$$(find "$(LIB)" -type f -newer "$(NAME)")" ] \
 		&& [ -z "$$(find . -name "Makefile" -newer "$(NAME)")" ]; then \
 		echo "✅👌 So_long déjà compilé ! 👌✅"; \
 	else \

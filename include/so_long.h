@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 10:57:33 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/11 11:18:27 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/14 11:03:13 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include "../libft/ft_printf.h"
 # include "../mlx-linux/mlx.h"
 # include "../mlx-linux/mlx_int.h"
-
-#include "tmp2.h"
 
 typedef struct data_character
 {

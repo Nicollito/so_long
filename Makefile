@@ -19,8 +19,7 @@ SRCS =	$(SRCS_DIR)/all_free.c \
 		$(SRCS_DIR)/set_mlx.c \
 		$(SRCS_DIR)/shape_map.c \
 		$(SRCS_DIR)/so_long.c \
-		$(SRCS_DIR)/user_actions.c \
-		$(SRCS_DIR)/tmp.c
+		$(SRCS_DIR)/user_actions.c
 
 OBJ_DIR = obj
 OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJ_DIR)/%.o)

@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 10:09:52 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/07 16:44:09 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/25 10:23:22 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	fill_map(t_alloc *all, char *name)
 			exit(free_all(all));
 		}
 	}
+	close(fd);
 }
 
 void	nbr_line_map(t_alloc *all, char *name)

@@ -6,7 +6,7 @@
 /*   By: nimadela <nimadela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 14:08:57 by nimadela          #+#    #+#             */
-/*   Updated: 2025/03/25 10:19:49 by nimadela         ###   ########.fr       */
+/*   Updated: 2025/03/28 14:14:58 by nimadela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ void	format_name(char *name)
 		exit(EXIT_FAILURE);
 	}
 	name = ft_strrchr(name, '.');
+	if (!name)
+	{
+		print_error("Error\nInvalid argument format.\n");
+		exit(EXIT_FAILURE);
+	}
 	if (ft_strlen(name) > 4)
 	{
 		print_error("Error\nInvalid argument format.\n");
